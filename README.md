@@ -47,7 +47,7 @@ gitOperation.config(
 );
 ```
 
-- Comit the repo
+- Commit the repo
 
 ```javascript
 gitOperation.commit(repoDirectoryPath, { message: commitMessage }, (err) => {
@@ -73,7 +73,7 @@ gitOperation.push(repoDirectoryPath, { branch: "Your Branch Name" }, (err) => {
 
 ## Options
 
-Use debug to print the usefult information.
+Use debug to print the useful information.
 
 ```javascript
 { debug: true, branch: "Your Branch Name" }
