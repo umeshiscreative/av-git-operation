@@ -20,8 +20,8 @@ const gitOperation = require("av-git-operation");
 
 ```javascript
 gitOperation.clone(
-  repoName,
-  repoDirectoryPath,
+  "YOUR REPO URL",
+  "FOLDER PATH WHERE YOU WANT TO PUT REPO",
   { checkout: "Your Branch Name" },
   (err) => {
     if (err) {
@@ -36,7 +36,7 @@ gitOperation.clone(
 
 ```javascript
 gitOperation.config(
-  repoDirectoryPath,
+  "FOLDER PATH WHERE YOU PUT REPO",
   { email: configUserEmail, name: configUserName },
   (err) => {
     if (err) {
@@ -50,7 +50,7 @@ gitOperation.config(
 - Commit the repo
 
 ```javascript
-gitOperation.commit(repoDirectoryPath, { message: commitMessage }, (err) => {
+gitOperation.commit("FOLDER PATH WHERE YOU PUT REPO",, { message: commitMessage }, (err) => {
   if (err) {
     throw err;
   }
@@ -61,7 +61,7 @@ gitOperation.commit(repoDirectoryPath, { message: commitMessage }, (err) => {
 - Push the changes to your repo
 
 ```javascript
-gitOperation.push(repoDirectoryPath, { branch: "Your Branch Name" }, (err) => {
+gitOperation.push("FOLDER PATH WHERE YOU PUT REPO",, { branch: "Your Branch Name" }, (err) => {
   if (err) {
     throw err;
   }
