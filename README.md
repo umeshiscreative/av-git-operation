@@ -20,7 +20,7 @@ const gitOperation = require("av-git-operation");
 
 ```javascript
 gitOperation.clone(
-  "YOUR REPO URL",
+  "YOUR HOST REPO URL",
   "FOLDER PATH WHERE YOU WANT TO PUT REPO",
   { checkout: "Your Branch Name" },
   (err) => {
@@ -50,22 +50,41 @@ gitOperation.config(
 - Commit the repo
 
 ```javascript
-gitOperation.commit("FOLDER PATH WHERE YOU PUT REPO",, { message: commitMessage }, (err) => {
-  if (err) {
-    throw err;
+gitOperation.commit(
+  "FOLDER PATH WHERE YOU PUT REPO",
+  { message: commitMessage },
+  (err) => {
+    if (err) {
+      throw err;
+    }
+    console.log("Commit Done");
   }
-  console.log("Commit Done");
-});
+);
 ```
 
 - Push the changes to your repo
 
 ```javascript
-gitOperation.push("FOLDER PATH WHERE YOU PUT REPO",, { branch: "Your Branch Name" }, (err) => {
+gitOperation.push(
+  "FOLDER PATH WHERE YOU PUT REPO",
+  { branch: "Your Branch Name" },
+  (err) => {
+    if (err) {
+      throw err;
+    }
+    console.log("Push Done");
+  }
+);
+```
+
+- File change status of your repo
+
+```javascript
+gitOperation.status("FOLDER PATH WHERE YOU PUT REPO", (result, err) => {
   if (err) {
     throw err;
   }
-  console.log("Push Done");
+  console.log(result);
 });
 ```
 
@@ -76,7 +95,9 @@ gitOperation.push("FOLDER PATH WHERE YOU PUT REPO",, { branch: "Your Branch Name
 Use debug to print the useful information.
 
 ```javascript
-{ debug: true, branch: "Your Branch Name" }
+{
+  debug: true;
+}
 ```
 
 ---

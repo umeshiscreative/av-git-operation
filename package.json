@@ -1,7 +1,7 @@
 {
   "name": "av-git-operation",
-  "version": "1.0.2",
-  "description": "Perform the git-operations in nodeJs.",
+  "version": "1.1.0",
+  "description": "Perform the git-operations in NodeJS/Javascript/Typescript.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,9 +13,12 @@
   "keywords": [
     "git",
     "nodejs",
+    "javascript",
     "git push",
     "git clone",
-    "git config"
+    "git config",
+    "git status",
+    "git commit"
   ],
   "author": "Umesh Verma",
   "license": "ISC",
