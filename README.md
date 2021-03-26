@@ -6,6 +6,10 @@ Perform the git-operations in nodeJs.
 
 ```
 npm i av-git-operation --save
+
+OR
+
+yarn add av-git-operation
 ```
 
 # Usage
