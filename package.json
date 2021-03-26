@@ -1,6 +1,6 @@
 {
   "name": "av-git-operation",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Perform the git-operations in NodeJS/Javascript/Typescript.",
   "main": "index.js",
   "scripts": {
